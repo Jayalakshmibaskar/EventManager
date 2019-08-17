@@ -5,16 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-TextView eventmanager_tv;
+//ImageView cit_iv;
 Button signin_btn,signup_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        eventmanager_tv=findViewById(R.id.eventmanager);
+//        cit_iv=findViewById(R.id.cit);
         signin_btn=findViewById(R.id.signin);
         signup_btn=findViewById(R.id.signup);
         signup_btn.setOnClickListener(new View.OnClickListener() {

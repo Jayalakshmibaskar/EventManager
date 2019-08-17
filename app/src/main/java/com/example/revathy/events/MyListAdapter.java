@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MyListAdapter extends ArrayAdapter<String> {
+public class    MyListAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
     private final String[] event;
