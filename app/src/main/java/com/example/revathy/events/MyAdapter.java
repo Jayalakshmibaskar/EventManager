@@ -46,8 +46,12 @@ MyAdapter extends BaseAdapter {
         convertView = inflater.inflate(R.layout.image,null,true);
 //        ImageView iv=convertView.findViewById(R.id.image);
 //        iv.setImageResource((int)list.get(position));
-        TextView tv=convertView.findViewById(R.id.name);
-        tv.setText(list.get(position).toString());
+        EventModel model=(EventModel)list.get(position);
+        TextView name=convertView.findViewById(R.id.name);
+        TextView desc=convertView.findViewById(R.id.description);
+        name.setText(model.getName());
+        desc.setText(model.getDesc());
+
         return convertView;
     }
 }

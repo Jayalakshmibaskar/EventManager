@@ -1,5 +1,6 @@
 package com.example.revathy.events;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,14 +32,25 @@ ArrayList list;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_name);
         event_name=findViewById(R.id.events);
+        send();
+        event_name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent_reg=new Intent(EventName.this,reg_form.class);
+                startActivity(intent_reg);
+
+            }
+        });
          list=new ArrayList();
 
-        send();
+
+
 
 
         }
     void send() {
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://192.168.43.165/event.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.BASE_URL+"event.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(final String response) {
@@ -48,12 +60,13 @@ ArrayList list;
                             JSONArray arr = new JSONArray(response);
                             for (int i=0;i<arr.length();i++){
                                 JSONObject obj=arr.getJSONObject(i);
-                                list.add(obj.getString("eventname"));
+
+                                list.add(new EventModel(obj.getString("eventname"),obj.getString("Desc"),obj.getString("eventid")));
                                 }
 //                            runOnUiThread(new Runnable() {
 //                                @Override
 //                                public void run() {
-                                    Toast.makeText(EventName.this, "test"+response, Toast.LENGTH_SHORT).show();
+                                   //Toast.makeText(EventName.this, "test"+response, Toast.LENGTH_SHORT).show();
                                     adapter = new MyAdapter(list,EventName.this);
                                     event_name.setAdapter(adapter);
 //                                }

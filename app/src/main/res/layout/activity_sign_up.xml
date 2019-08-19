@@ -55,12 +55,10 @@
 
             <Button
                 android:id="@+id/signup"
-                android:layout_width="100dp"
-                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="370dp"
-                android:layout_marginRight="100dp"
                 android:background="@color/colorAccent"
                 android:text="signup" />
         </RelativeLayout>
