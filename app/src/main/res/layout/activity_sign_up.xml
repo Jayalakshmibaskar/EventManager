@@ -45,7 +45,6 @@
         android:layout_marginRight="38dp"
         android:layout_marginBottom="83dp"
         app:cardBackgroundColor="@color/colorAccent"
-
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp">
 

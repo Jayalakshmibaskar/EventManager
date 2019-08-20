@@ -10,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.AdapterView;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -43,11 +44,6 @@ ArrayList list;
             }
         });
          list=new ArrayList();
-
-
-
-
-
         }
     void send() {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.BASE_URL+"event.php",
@@ -63,14 +59,10 @@ ArrayList list;
 
                                 list.add(new EventModel(obj.getString("eventname"),obj.getString("Desc"),obj.getString("eventid")));
                                 }
-//                            runOnUiThread(new Runnable() {
-//                                @Override
-//                                public void run() {
-                                   //Toast.makeText(EventName.this, "test"+response, Toast.LENGTH_SHORT).show();
+
                                     adapter = new MyAdapter(list,EventName.this);
                                     event_name.setAdapter(adapter);
-//                                }
-//                            });
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -79,9 +71,13 @@ ArrayList list;
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
-                Toast.makeText(EventName.this, "error"+error.getMessage()+error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(EventName.this, "error"+error.toString(), Toast.LENGTH_SHORT).show();
             }
-        });
+        });stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                8000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT)
+        );
         Volley.newRequestQueue(this).add(stringRequest);
     }
 

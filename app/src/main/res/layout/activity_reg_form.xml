@@ -4,94 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".reg_form">
+    tools:context=".reg_form"
+    android:padding="20dp"
+    android:background="@drawable/form_background">
 
     <android.support.v7.widget.CardView
-        android:layout_width="320dp"
-        android:layout_height="450dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="24dp" >
-        <RelativeLayout
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="#EDBB99">
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/form_reg"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="27dp"
-                android:layout_marginLeft="27dp"
-                android:text="        REGISTRATION FORM "
-                android:background="#68041d"
-                android:textSize="20dp"
-                android:textColor="#ffff"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                android:layout_marginTop="9dp" />
+                <TextView
+                    android:id="@+id/form_reg"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="31dp"
+                    android:background="#68041d"
+                    android:text="     REGISTRATION FORM "
+                    android:textColor="#ffff"
+                    android:textSize="22dp" />
 
-            <EditText
-                android:id="@+id/form_name"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="60dp"
-                android:hint="                 Enter your name" />
-            <EditText
-                android:id="@+id/form_email"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="110dp"
-                android:hint="                 Enter your email" />
-            <EditText
-                android:id="@+id/form_mobile"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="160dp"
-                android:hint="                 Enter your mobile number" />
-            <EditText
-                android:id="@+id/form_college"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="210dp"
-                android:hint="                 Enter your college name" />
-            <EditText
-                android:id="@+id/form_dept"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="260dp"
-                android:hint="                 Enter your department" />
-            <EditText
-                android:id="@+id/form_year"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="310dp"
-                android:hint="                 Enter your year" />
+                <EditText
+                    android:id="@+id/form_name"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="115dp"
+                    android:hint="          Enter your name" />
 
-            <Button
-                android:id="@+id/register"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="87dp"
-                android:layout_marginLeft="87dp"
-                android:text="REGISTER"
-                android:textColor="#ffff"
-                android:layout_marginBottom="21dp"
-                android:background="#68041d"/>
-        </RelativeLayout>
+                <EditText
+                    android:id="@+id/form_email"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="185dp"
+                    android:hint="          Enter your email" />
+
+                <EditText
+                    android:id="@+id/form_mobile"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="255dp"
+                    android:hint="          Enter your mobile number" />
+
+                <EditText
+                    android:id="@+id/form_college"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="325dp"
+                    android:hint="          Enter your college name" />
+
+                <EditText
+                    android:id="@+id/form_dept"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="395dp"
+                    android:hint="          Enter your department" />
+
+                <EditText
+                    android:id="@+id/form_year"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="465dp"
+                    android:hint="            Enter your year" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="560dp"
+                    app:cardBackgroundColor="#68041d"
+                    app:cardCornerRadius="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/register"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="46dp"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="#68041d"
+                            android:text="REGISTER"
+                            android:textColor="#ffff" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+
     </android.support.v7.widget.CardView>
 
 
