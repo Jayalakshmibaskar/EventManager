@@ -52,7 +52,7 @@ public class reg_form extends AppCompatActivity {
                 year_str = year_edt.getText().toString().trim();
                 if (Patterns.EMAIL_ADDRESS.matcher(email_str).matches()) {
 
-                    StringRequest sr = new StringRequest(Request.Method.POST, Constants.BASE_URL + "registrationform.php",
+                    StringRequest sr = new StringRequest(Request.Method.POST, Constants.BASE_URL +"registrationform.php",
                             new Response.Listener<String>() {
                                 @Override
                                 public void onResponse(String response) {

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignIn"
-    android:background="@drawable/background">
+    tools:context=".SignIn">
 
     <EditText
         android:id="@+id/username"
@@ -14,21 +13,23 @@
         android:layout_marginTop="220dp"
         android:layout_centerHorizontal="true"
         android:drawableLeft="@drawable/ic_action_name"
-        android:hint="          ENTER USER ID" />
+        android:gravity="center"
+        android:hint="ENTER USER ID" />
     <EditText
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:drawableLeft="@drawable/ic_action_user"
-        android:hint="          ENTER PASSWORD"
-        android:layout_marginTop="330dp" />
+        android:hint="ENTER PASSWORD"
+        android:gravity="center"
+        android:layout_marginTop="300dp" />
 
     <android.support.v7.widget.CardView
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="370dp"
         app:cardBackgroundColor="#00CED1"
         app:cardCornerRadius="20dp">
 
@@ -42,9 +43,11 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:background="#00CED1"
-                android:text="  signin" />
+                android:text="signin"
+                android:layout_centerInParent="true"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
+
 
     <ImageView
         android:id="@+id/image_pic"

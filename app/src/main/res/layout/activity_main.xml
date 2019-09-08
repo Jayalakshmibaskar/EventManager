@@ -4,79 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bluro"
+    android:padding="10dp"
     tools:context=".Activities.MainActivity">
 
-
     <android.support.v7.widget.CardView
-        android:layout_width="205dp"
-        android:layout_height="65dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="78dp"
-        android:layout_marginRight="78dp"
-        android:layout_marginBottom="210dp"
-        app:cardBackgroundColor="#fa8072"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="65dp">
-
-            <Button
-                android:id="@+id/signin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:background="#fa8072"
-                android:text="sign in" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="205dp"
-        android:layout_height="65dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="114dp"
-        app:cardBackgroundColor="#fa8072"
-
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
+        <TextView
+            android:id="@+id/cit"
             android:layout_width="wrap_content"
-            android:layout_height="65dp">
-
-            <Button
-                android:id="@+id/signup"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:background="#fa8072"
-                android:text="sign up" />
-
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="CHENNAI INSTITUTE OF TECHNOLOGY"
+            android:textColor="#080808"
+            android:textSize="30dp" />
     </android.support.v7.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginLeft="113dp"
-        android:layout_marginTop="107dp"
-        android:background="@drawable/circle"
-        app:srcCompat="@drawable/cit" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="93dp">
+
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:background="#acb9ec"
+            android:text="sign in"
+            android:textSize="20dp" />
 
 
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:background="#acb9ec"
+            android:text="sign up"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
 </RelativeLayout>
